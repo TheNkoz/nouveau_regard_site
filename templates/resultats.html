@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-    <meta charset="UTF-8">
-    <title>Résultats</title>
+<meta charset='UTF-8'>
+<title>Résultats</title>
+<link rel='stylesheet' href='/static/css/style.css'>
 </head>
 <body>
-    <h2>Résultats du questionnaire</h2>
-    <table border="1">
-        <tr><th>Quartier</th><th>Nombre de réponses</th></tr>
-        {% for quartier, count in data %}
-        <tr><td>{{ quartier }}</td><td>{{ count }}</td></tr>
-        {% endfor %}
-    </table>
-    <a href="/">Retour à l'accueil</a>
+<header><h1>Résultats du questionnaire</h1></header>
+<main>
+<table>
+<thead><tr><th>Quartier</th><th>Nombre de réponses</th></tr></thead>
+<tbody>
+{% for quartier, count in data %}
+<tr><td>{{ quartier }}</td><td>{{ count }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</main>
 </body>
 </html>

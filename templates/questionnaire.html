@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-    <meta charset="UTF-8">
-    <title>Questionnaire</title>
+<meta charset='UTF-8'>
+<title>Questionnaire</title>
+<link rel='stylesheet' href='/static/css/style.css'>
 </head>
 <body>
-    <h2>Questionnaire</h2>
-    <form action="/submit" method="post">
-        Nom : <input type="text" name="nom"><br>
-        Âge : <input type="number" name="age"><br>
-        Quartier : <input type="text" name="quartier"><br>
-        Votre avis : <textarea name="avis"></textarea><br>
-        <input type="submit" value="Envoyer">
-    </form>
+<header><h1>Exprimez-vous</h1></header>
+<main>
+<form action='/submit' method='post' class='form-style'>
+<label>Nom : <input type='text' name='nom'></label>
+<label>Âge : <input type='number' name='age'></label>
+<label>Quartier : <input type='text' name='quartier'></label>
+<label>Votre avis : <textarea name='avis'></textarea></label>
+<button type='submit'>Envoyer</button>
+</form>
+</main>
 </body>
 </html>
